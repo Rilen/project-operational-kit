@@ -10,8 +10,9 @@
 * `protocol/v1/principles.md` (P3, P4, P5, P6)
 * `protocol/v1/authority.md` (Nível 5, Tratamento de Findings)
 * `protocol/v1/lifecycle.md` (Fase 3: Hardening / Resolution)
+* `protocol/v1/github-lifecycle.md` (Reconciliação do Ciclo de Vida do GitHub, Prevenção de Contaminação)
 * `protocol/v1/state-machine.md` (`HARDENING_REQUIRED` → `EXECUTING_DELIVERY` → `DELIVERY_CANDIDATE` → `AUDITING`)
-* `skills/operational-kit/SKILL.md` (Decisão Humana 02 / F-SKILL-02, PC-03, PC-07, PC-08)
+* `skills/operational-kit/SKILL.md` (Decisão Humana 02 / F-SKILL-02, PC-03, PC-07, PC-08, PC-10)
 
 ---
 

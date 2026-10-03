@@ -116,9 +116,10 @@ O objetivo do ciclo de vida é assegurar rastreabilidade de ponta a ponta, errad
 ---
 
 ### Transição de Conclusão: Human Gate 2 (Closure)
-* **Ato Soberano:** Ocorre exclusivamente após a emissão de parecer `PASS` pela auditoria independente.
+* **Ato Soberano:** Ocorre exclusivamente após a emissão de parecer `PASS` pela auditoria independente e apresentação do diagnóstico de reconciliação de governança (`github-lifecycle.md`).
 * **Operações do Portão:**
-  * Revisão final do parecer pelo operador humano.
-  * Autorização formal para integração do código (merge em branch canônica, publicação, deploy).
+  * Revisão final do parecer de auditoria e do Recibo de Reconciliação do GitHub pelo operador humano.
+  * Deliberação sobre eventuais desvios de governança identificados (*Governance Drift*).
+  * Autorização formal para integração do código (merge em branch canônica, publicação, deploy) e eventuais mutações no GitHub (fechamento de issue, merge de PR, atualização de project).
   * Homologação institucional e arquivamento formal do ciclo.
 * **Transição Final:** Missão atinge o estado terminal `CLOSED`.

@@ -61,8 +61,10 @@
 ## 6. Conclusão e Resultado da Auditoria
 
 * **Resultado da Avaliação:** <`AUDIT_PASSED` | `AUDIT_FAILED` | `BLOCKED`>
+* **Status de Fechamento de Sessão (Closeout):**
+  * `<TECHNICALLY_CLEAN_GOVERNANCE_RECONCILED | TECHNICALLY_CLEAN_GOVERNANCE_PENDING | BLOCKED_GOVERNANCE_CONTAMINATION>`
 * **Justificativa do Resultado:** <Síntese da conformidade verificada ou dos achados que impedem o avanço>
 * **Próxima Ação Requerida:**
-  * *Em caso de `AUDIT_PASSED`:* Disponível para decisão humana de homologação ou transição seguinte.
+  * *Em caso de `AUDIT_PASSED`:* Disponível para decisão humana de homologação ou transição seguinte (acompanhado do Recibo de Reconciliação do GitHub).
   * *Em caso de `AUDIT_FAILED`:* Encaminhamento para Contrato 3 (Prompt 3 — Hardening Report) para saneamento dos achados.
-  * *Em caso de `BLOCKED`:* Resolução de dependência ou pré-condição externa impeditiva.
+  * *Em caso de `BLOCKED`:* Resolução de dependência, contaminação de branch ou pré-condição externa impeditiva.

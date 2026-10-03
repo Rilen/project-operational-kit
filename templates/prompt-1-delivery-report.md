@@ -76,4 +76,6 @@
 ## 8. Estado Final da Entrega
 
 * **Status da Fase:** `DELIVERY_CANDIDATE`
+* **Status de Governança GitHub (Closeout Preliminar):**
+  * `<TECHNICALLY_CLEAN_GOVERNANCE_RECONCILED | TECHNICALLY_CLEAN_GOVERNANCE_PENDING | BLOCKED_GOVERNANCE_CONTAMINATION>`
 * **Transição Requerida:** Submissão ao Contrato 2 (Prompt 2 — Auditoria Independente).

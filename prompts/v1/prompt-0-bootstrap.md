@@ -10,9 +10,10 @@
 * `protocol/v1/principles.md` (P1 a P6)
 * `protocol/v1/authority.md` (Níveis 1 a 5, Fontes Normativas)
 * `protocol/v1/lifecycle.md` (Fase 0)
+* `protocol/v1/github-lifecycle.md` (Reconciliação do Ciclo de Vida do GitHub, Discovery)
 * `protocol/v1/state-machine.md` (`UNINITIALIZED` → `NORMATIVE_LOADING` → `DISCOVERY_READY` / `BLOCKED`)
 * `protocol/v1/project-archetypes.md` (Arquétipos A a E)
-* `skills/operational-kit/SKILL.md` (PC-01, PC-02, PC-05, PC-08)
+* `skills/operational-kit/SKILL.md` (PC-01, PC-02, PC-05, PC-08, PC-10)
 
 ---
 

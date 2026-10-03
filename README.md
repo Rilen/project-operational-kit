@@ -58,13 +58,13 @@ HUMAN GATES (Validação e Deliberação Soberana)
 ```
 
 1. **`protocol/v1/` — Base Normativa:**  
-   A lei substantiva e processual do ecossistema. Define os 6 Princípios Canônicos (`principles.md`), a Hierarquia de Autoridade de 5 níveis (`authority.md`), o Ciclo de Vida em 4 fases (`lifecycle.md`), os 12 Estados da Máquina de Estados (`state-machine.md`), a Taxonomia Epistemológica de 9 tipos (`evidence-taxonomy.md`) e os Arquétipos de Projeto (`project-archetypes.md`).
+   A lei substantiva e processual do ecossistema. Define os 6 Princípios Canônicos (`principles.md`), a Hierarquia de Autoridade de 5 níveis (`authority.md`), o Ciclo de Vida em 4 fases (`lifecycle.md`), os 12 Estados da Máquina de Estados (`state-machine.md`), a Taxonomia Epistemológica de 9 tipos (`evidence-taxonomy.md`), os Arquétipos de Projeto (`project-archetypes.md`) e a Reconciliação do Ciclo de Vida do GitHub (`github-lifecycle.md`).
 2. **`skills/operational-kit/` — Guia Procedimental Transversal:**  
-   A Skill Operacional V1 (`SKILL.md`) é o guia de comportamento do agente. Ela instrui o agente sobre como obedecer ao protocolo, verificar pré-condições (PC-01 a PC-09) e manter o rigor epistêmico. *A Skill operacionaliza o protocolo; ela não cria autoridade própria nem homologa entregas.*
+   A Skill Operacional V1 (`SKILL.md`) é o guia de comportamento do agente. Ela instrui o agente sobre como obedecer ao protocolo, verificar pré-condições (PC-01 a PC-10) e manter o rigor epistêmico. *A Skill operacionaliza o protocolo; ela não cria autoridade própria nem homologa entregas.*
 3. **`prompts/v1/` — Contratos Operacionais de Entrada:**  
    Contratos executáveis de controle de sessão (`OP-PROMPT-0` a `OP-PROMPT-3`). Cada prompt parametriza e delimita rigorosamente o que o agente pode e não pode fazer em cada fase específica do ciclo.
 4. **`templates/` — Estruturas Formais de Saída e Governança:**  
-   Modelos padronizados de relatórios (`templates/prompt-*-report.md`) e registro de exceções (`deviations.md.template`). Garantem que toda conclusão técnica seja documentada com suficiência probatória. *Um template é a forma vazia; o report é a evidência preenchida.*
+   Modelos padronizados de relatórios (`templates/prompt-*-report.md`), recibos de reconciliação (`templates/github-lifecycle-reconciliation-receipt.md`) e registro de exceções (`deviations.md.template`). Garantem que toda conclusão técnica seja documentada com suficiência probatória. *Um template é a forma vazia; o report é a evidência preenchida.*
 
 ---
 

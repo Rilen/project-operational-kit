@@ -175,6 +175,17 @@ Antes de orientar qualquer transição, o agente deve verificar o atendimento da
 * **Verificação:** Deliberação humana explícita autorizando o fechamento e/ou integração do trabalho (`[HUMAN DECISION]`).
 * **Se falhar:** O estado permanece em `AWAITING_HUMAN_CLOSURE`. A Skill não pode declarar uma missão `CLOSED`.
 
+### PC-10 GitHub Lifecycle Reconciliation (Reconciliação do Ciclo de Vida do GitHub)
+* **Propósito:** Assegurar que o estado gerencial nas superfícies do GitHub (Issues, PRs, Milestones, Projects) represente fielmente a realidade técnica verificada, prevenindo desvios (*governance drift*) e contaminação de branches.
+* **Momento:** No Bootstrap (Fase 0 - Discovery), antes de submissão de entregas (Fase 1/3) e compulsoriamente no encerramento (Human Gate 2 / Closeout).
+* **Regra Fundamental: Discovery Before Mutation:**
+  1. O agente não presume a adoção universal de Issues, Milestones, Projects ou PRs. As superfícies devem ser classificadas como `PRESENT`, `ABSENT`, `NOT USED`, `UNKNOWN` ou `NOT APPLICABLE`. Ausência não é erro.
+  2. Mutações gerenciais (fechar issues, alterar milestones, mover cards, criar PRs) exigem autorização humana prévia e explícita (`[AUTHORIZATION]`). O diagnóstico é somente-leitura por padrão.
+  3. Prevenção de contaminação cruzada (*Cross-Issue Branch Contamination*): Verificar se a branch da missão contém commits alheios à demanda antes de qualquer ação de integração.
+* **Semântica de Encerramento (Closeout):**
+  * `Git clean ≠ Governance reconciled`. Se o código e testes estiverem limpos, mas houver pendências gerenciais no GitHub, o estado de fechamento é categorizado como `TECHNICALLY_CLEAN_GOVERNANCE_PENDING`.
+* **Se falhar:** Risco de contaminação de branch impõe `[BLOCK]`. Desvios gerenciais não bloqueiam o código, mas devem ser formalizados no recibo de reconciliação para decisão humana.
+
 ---
 
 ## 5. Mapeamento dos Contratos Operacionais e Templates
@@ -204,6 +215,11 @@ O agente deve materializar as saídas das quatro etapas operacionais utilizando 
 * **Regras:** Escopo estritamente limitado aos `FINDINGS` da auditoria de origem. Refatoração oportunista é proibida.
 * **Saída:** Relatório de remediação que conduz o fluxo de re-execução (`EXECUTING_DELIVERY → DELIVERY_CANDIDATE → AUDITING`).
 * **Advertência Obrigatória:** `HARDENING ↛ CLOSURE`. É terminantemente proibido encerrar a missão a partir do Hardening sem re-auditoria formal.
+
+### Recibo de Reconciliação do GitHub (`templates/github-lifecycle-reconciliation-receipt.md`)
+* **Finalidade:** Documentar o inventário de superfícies do GitHub, status da Issue, PR, Milestone, Project, detecção de contaminação cruzada de branch e classificação de governança drift.
+* **Modo:** Read-Only na apuração; mutações gerenciais somente sob autorização humana explícita.
+* **Saída:** Diagnóstico consolidado com semântica de closeout (`TECHNICALLY_CLEAN_GOVERNANCE_RECONCILED` ou `TECHNICALLY_CLEAN_GOVERNANCE_PENDING`).
 
 ### Registro de Exceções (`templates/deviations.md.template`)
 * **Conceito:** Um desvio ou exceção operacional não registrado formalmente não pode ser tratado pelo protocolo como exceção autorizada.

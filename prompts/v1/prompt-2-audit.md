@@ -10,9 +10,10 @@
 * `protocol/v1/principles.md` (P1, P4, P6)
 * `protocol/v1/authority.md` (Nível 4: Agente Auditor, Pareceres Formais)
 * `protocol/v1/lifecycle.md` (Fase 2: Independent Audit)
+* `protocol/v1/github-lifecycle.md` (Reconciliação do Ciclo de Vida do GitHub, Prevenção de Contaminação)
 * `protocol/v1/state-machine.md` (`DELIVERY_CANDIDATE` → `AUDITING` → `AUDIT_PASSED` / `HARDENING_REQUIRED` / `BLOCKED`)
 * `protocol/v1/evidence-taxonomy.md` (Taxonomia, Antitautologia, Rastreabilidade)
-* `skills/operational-kit/SKILL.md` (PC-06, PC-07, PC-08)
+* `skills/operational-kit/SKILL.md` (PC-06, PC-07, PC-08, PC-10)
 
 ---
 

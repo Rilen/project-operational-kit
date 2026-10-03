@@ -33,6 +33,11 @@
 
 * **Estrutura do Workspace:** <Resumo estrutural dos diretórios e arquivos observados> `[FACT]`
 * **Toolchain / Dependências Identificadas:** <Ferramentas, gerenciadores de pacotes ou runtimes detectados> `[FACT]`
+* **Superfícies GitHub Observadas (PC-10 Discovery):**
+  * *Issues:* `<PRESENT | ABSENT | NOT USED | UNKNOWN>` `[FACT]`
+  * *Pull Requests:* `<PRESENT | ABSENT | NOT USED | UNKNOWN>` `[FACT]`
+  * *Milestones:* `<PRESENT | ABSENT | NOT USED | UNKNOWN>` `[FACT]`
+  * *Projects:* `<PRESENT | ABSENT | NOT USED | UNKNOWN>` `[FACT]`
 * **Restrições Operacionais Detectadas:** <ex: ausência de rede, ausência de testes automatizados, permissões restritas> `[FACT]`
 
 ---

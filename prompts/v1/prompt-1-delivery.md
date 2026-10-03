@@ -10,9 +10,10 @@
 * `protocol/v1/principles.md` (P2, P3, P4, P5, P6)
 * `protocol/v1/authority.md` (Nível 5: Agente Executor, Human Gate 1)
 * `protocol/v1/lifecycle.md` (Fase 1: Delivery)
+* `protocol/v1/github-lifecycle.md` (Reconciliação do Ciclo de Vida do GitHub, Prevenção de Contaminação)
 * `protocol/v1/state-machine.md` (`AWAITING_HUMAN_MANDATE` → `EXECUTING_DELIVERY` → `DELIVERY_CANDIDATE` / `BLOCKED`)
 * `protocol/v1/evidence-taxonomy.md` (Cadeia de Rastreabilidade, Antitautologia)
-* `skills/operational-kit/SKILL.md` (PC-03, PC-04, PC-05, PC-07, PC-08)
+* `skills/operational-kit/SKILL.md` (PC-03, PC-04, PC-05, PC-07, PC-08, PC-10)
 
 ---
 
