@@ -1,0 +1,48 @@
+# REGISTRO DE DESVIOS E EXCEÇÕES OPERACIONAIS: <PROJECT_NAME>
+
+> [!IMPORTANT]
+> **Princípio de Rastreabilidade de Exceções:**
+> Um desvio operacional ou normativo não registrado formalmente não pode ser tratado pelo protocolo como exceção autorizada.
+> Todo desvio requer justificativa técnica explícita, escopo delimitado, autorização humana competente e temporalidade definida.
+
+---
+
+## Estrutura de Registro de Desvio
+
+### Desvio: <ID_DO_DESVIO, ex: DEV-YYYY-001>
+
+* **Título / Resumo:** <Descrição sucinta do desvio> `[FACT]`
+* **Data do Registro:** <YYYY-MM-DDTHH:MM:SSZ> `[FACT]`
+* **Status do Desvio:** `PROPOSED` | `AUTHORIZED` | `REJECTED` | `EXPIRED` | `REVOKED`
+
+#### 1. Regra / Pré-condição Afetada
+* **Dispositivo Normativo / Pré-condição:** <ex: PC-07 ou Regra específica do protocolo> `[REQUIREMENT]`
+* **Comportamento Padrão Exigido:** <O que a regra exige em condições normais> `[REQUIREMENT]`
+* **Comportamento Adotado sob Desvio:** <O que será feito de forma divergente> `[FACT]`
+
+#### 2. Justificativa Técnica e Operacional
+* **Motivação:** <Razão objetiva pela qual o padrão normativo não pode ser atendido nesta circunstância> `[FACT]`
+* **Análise de Impacto e Riscos:** <Riscos introduzidos pela não aderência temporária e impacto sistêmico> `[HYPOTHESIS]`
+
+#### 3. Escopo e Delimitação
+* **Escopo Aplicável:** <Componentes, arquivos, tarefas ou missões cobertas pelo desvio> `[REQUIREMENT]`
+* **Escopo Excluído:** <O que permanece sob conformidade estrita e não pode se beneficiar do desvio> `[REQUIREMENT]`
+
+#### 4. Autoridade e Decisão
+* **Autoridade Competente:** <Identificador da autoridade humana responsável pela aprovação> `[AUTHORIZATION]`
+* **Referência da Decisão:** <Link, ID de issue, commit, ata ou registro da decisão humana autorizativa> `[EVIDENCE]`
+* **Data da Decisão:** <YYYY-MM-DDTHH:MM:SSZ> `[FACT]`
+
+#### 5. Controles Compensatórios e Mitigações
+* **Ações Mitigadoras:** <Medidas adotadas para mitigar o risco decorrente da exceção> `[REQUIREMENT]`
+* **Critério de Inspeção:** <Como a auditoria deve avaliar o desvio e os controles compensatórios> `[REQUIREMENT]`
+
+#### 6. Validade Temporal e Critério de Encerramento
+* **Prazo de Validade / Data de Expiração:** <YYYY-MM-DD ou marco de encerramento da missão> `[FACT]`
+* **Condição de Revogação:** <Condição na qual o desvio é cancelado ou superado> `[REQUIREMENT]`
+
+#### 7. Rastreabilidade e Evidências Associadas
+* **Relatórios / Entregas Vinculadas:** <IDs dos relatórios de bootstrap, delivery ou auditoria associados> `[EVIDENCE]`
+* **Histórico de Revisões:**
+  * `<YYYY-MM-DD>: Criação / Proposta` `[FACT]`
+  * `<YYYY-MM-DD>: Autorização registrada por <autoridade>` `[FACT]`
