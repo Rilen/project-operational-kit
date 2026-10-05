@@ -1,5 +1,7 @@
 # [OP-PROMPT-0] BOOTSTRAP / BASELINE DISCOVERY PROMPT
 
+> **Compatibilidade Kit V2 (2.0.0):** contrato preservado como **contrato interno de fase** (opcional como interface humana); o gatilho semântico equivalente é `Agente, iniciar sessão` (`protocol/v2/operational-triggers.md`). `PROMPT ≠ AUTHORITY`.
+
 ## CONTRATO OPERACIONAL DE ENTRADA — FASE 0
 
 **Identificador Canônico:** `OP-PROMPT-0`  

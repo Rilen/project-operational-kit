@@ -1,5 +1,7 @@
 # [OP-PROMPT-2] INDEPENDENT AUDIT PROMPT
 
+> **Compatibilidade Kit V2 (2.0.0):** contrato preservado como **contrato interno de fase** (opcional como interface humana); o gatilho semântico equivalente é `Agente, auditar`. `AUDITOR != VETO SOBERANO`; o veto técnico vincula apenas a transição técnica (`protocol/v2/authority-invariants-v2.md`).
+
 ## CONTRATO OPERACIONAL DE ENTRADA — FASE 2
 
 **Identificador Canônico:** `OP-PROMPT-2`  

@@ -1,5 +1,7 @@
 # [OP-PROMPT-1] DELIVERY / EXECUTION PROMPT
 
+> **Compatibilidade Kit V2 (2.0.0):** contrato preservado como **contrato interno de fase** (opcional como interface humana); o gatilho semântico equivalente é `Agente, continuar` (Continuous Engineering Loop dentro de envelope ativo). `PROMPT ≠ AUTHORITY`.
+
 ## CONTRATO OPERACIONAL DE ENTRADA — FASE 1
 
 **Identificador Canônico:** `OP-PROMPT-1`  

@@ -6,6 +6,37 @@ e este projeto adere ao Versionamento Semântico.
 
 ---
 
+## [2.0.0] - 2026-10-05
+
+### Adicionado — Camada Aditiva V2: Risk-Proportional Governance & Continuous Engineering Loop
+- **`protocol/v2/risk-governance.md`:** classes `FAST` / `CONTROLLED` / `SOVEREIGN`, classificação **fail-closed**, matriz de triggers de escalonamento e **auto-escalonamento somente para cima**. Operacionaliza o Princípio 6 (Verificabilidade e Proporcionalidade).
+- **`protocol/v2/delivery-window-envelope.md`:** **Delivery Window** e **Delivery Envelope** (autorização humana delimitada); `NO ENVELOPE → NO DELIVERY`; Window Classifications **não** são estados canônicos.
+- **`protocol/v2/continuous-loop.md`:** **Continuous Engineering Loop** dentro de envelope ativo; Loop Control Classifications **não** são estados; **taxonomia de exceções** (`EX_AUTHORITY`, `EX_SCOPE`, `EX_RISK`, `EX_REVERSIBILITY`, `EX_NORMATIVE`, `EX_PUBLICATION`, `EX_CLOSURE`, `EX_SECURITY`, `EX_AMBIGUITY`, `EX_ENVIRONMENT`); **Human Attention = Exception-Driven, Not Phase-Driven**.
+- **`protocol/v2/human-gate-aggregation.md`:** agregação de Human Gates por classe (FAST/CONTROLLED) preservando HG1/HG2 para `SOVEREIGN`.
+- **`protocol/v2/proportional-validation-audit.md`:** densidade de validação/auditoria proporcional (Automated / Integrated Independent / Sovereign Independent).
+- **`protocol/v2/operational-triggers.md`:** gatilhos operacionais semânticos (`Agente, iniciar sessão` · `continuar` · `tratar issue #N` · `auditar` · `corrigir` · `publicar` · `status` · `finalizar sessão`) e preservação dos `OP-PROMPT-0..3` como **contratos internos compatíveis**.
+- **`protocol/v2/reporting-and-tracking-compression.md`:** **Micro Evidence** e compressão de tracking (`PRODUCT CAPABILITY → ISSUE`; `SMALL STEP → CHECKPOINT`).
+- **`protocol/v2/authority-invariants-v2.md`:** invariantes e reconciliações — auditor sem soberania, Fast Track proibido × proporcionalidade, precedência aditiva.
+- **Templates:** `templates/delivery-envelope.md`, `templates/micro-evidence-record.md`, `templates/exception-record.md`.
+- **Testes:** `tests/test_risk_governance_v2.js` (classificação fail-closed, escalonamento, loop, agregação, exceções, gatilhos, invariantes e integridade documental).
+
+### Reconciliado
+- **"Auditor com poder de veto vinculante" × "AUDITOR ≠ VETO SOBERANO":** o veto técnico do auditor vincula **apenas a transição técnica** (`FINDING → HARDENING_REQUIRED`); **não** confere autoridade soberana e **não** se sobrepõe aos Níveis 1/2 (`protocol/v2/authority-invariants-v2.md`).
+- **"Fast Track proibido" × "risk-proportional governance":** `PROPORTIONAL GOVERNANCE ≠ FAST TRACK`, `AGGREGATED GATES ≠ REMOVED AUTHORITY`, `CONTINUOUS LOOP ≠ CONTINUOUS AUTHORITY`. A proibição de `SKILL §8.8` permanece vigente; a proporcionalidade **regulada por classe** é aplicação legítima do Princípio 6.
+
+### Modificado
+- `README.md`: camada aditiva V2 e estrutura canônica do repositório.
+- `skills/operational-kit/SKILL.md`: seção V2 e reconciliação da vedação de "Fast Track".
+- `protocol/v1/lifecycle.md` e `protocol/v1/state-machine.md`: notas de precedência (V1 = baseline `SOVEREIGN`; Window/Loop Classifications ≠ estados).
+- `prompts/v1/prompt-0..3`: nota de compatibilidade V2 (contratos internos).
+
+### Preservado
+- Os **seis princípios canônicos** permanecem **inalterados**.
+- `protocol/v1/` permanece o **baseline `SOVEREIGN`**; a V2 é **aditiva**.
+- **`KIT UPDATE ≠ PROJECT UPDATE`:** nenhum projeto consumidor é atualizado automaticamente.
+
+---
+
 ## [1.1.0] - 2026-10-03
 
 ### Adicionado

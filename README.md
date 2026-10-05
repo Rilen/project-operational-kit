@@ -66,6 +66,17 @@ HUMAN GATES (Validação e Deliberação Soberana)
 4. **`templates/` — Estruturas Formais de Saída e Governança:**  
    Modelos padronizados de relatórios (`templates/prompt-*-report.md`), recibos de reconciliação (`templates/github-lifecycle-reconciliation-receipt.md`) e registro de exceções (`deviations.md.template`). Garantem que toda conclusão técnica seja documentada com suficiência probatória. *Um template é a forma vazia; o report é a evidência preenchida.*
 
+> **Camada Aditiva V2 (`protocol/v2/`, a partir de 2.0.0):** o Master Kit incorpora, de forma genérica e reutilizável entre projetos, a **governança proporcional ao risco** (`FAST` / `CONTROLLED` / `SOVEREIGN` com classificação fail-closed e auto-escalonamento só para cima), o **Delivery Window / Delivery Envelope**, o **Continuous Engineering Loop** com **atenção humana por exceção**, a **agregação de Human Gates por classe**, a **validação/auditoria proporcionais**, a **micro evidência**, a **compressão de tracking/reporting** e os **gatilhos operacionais semânticos**. Os `OP-PROMPT-0..3` são preservados como **contratos internos compatíveis**.
+>
+> ```text
+> PART I  (protocol/v1) = BASELINE SOVEREIGN (preservado)
+> PART II (protocol/v2) QUALIFICA POR CLASSE DE RISCO (aditivo)
+> PROPORTIONAL GOVERNANCE ≠ FAST TRACK
+> AGGREGATED GATES ≠ REMOVED AUTHORITY
+> CONTINUOUS LOOP ≠ CONTINUOUS AUTHORITY
+> KIT UPDATE ≠ PROJECT UPDATE
+> ```
+
 ---
 
 ## 3. História Evolutiva: Do Conceito aos Contratos Canônicos
@@ -176,24 +187,37 @@ Para eliminar falsos positivos probatórios, testes adicionados para comprovar c
 project-operational-kit/
 ├── README.md                           # Documentação central do Master Kit
 ├── protocol/
-│   └── v1/
-│       ├── authority.md                # Hierarquia de autoridade e Human Gates
-│       ├── evidence-taxonomy.md        # Taxonomia de dados e padrão probatório
-│       ├── lifecycle.md                # As 4 fases canônicas de intervenção
-│       ├── principles.md               # 6 princípios pétreos universais (P1 a P6)
-│       ├── project-archetypes.md       # Diretrizes para arquétipos A a E
-│       └── state-machine.md            # Os 12 estados canônicos e matriz de transição
+│   ├── v1/                             # Baseline SOVEREIGN (preservado)
+│   │   ├── authority.md                # Hierarquia de autoridade e Human Gates
+│   │   ├── evidence-taxonomy.md        # Taxonomia de dados e padrão probatório
+│   │   ├── github-lifecycle.md         # Reconciliação do ciclo de vida do GitHub
+│   │   ├── lifecycle.md                # As 4 fases canônicas de intervenção
+│   │   ├── principles.md               # 6 princípios pétreos universais (P1 a P6)
+│   │   ├── project-archetypes.md       # Diretrizes para arquétipos A a E
+│   │   └── state-machine.md            # Os 12 estados canônicos e matriz de transição
+│   └── v2/                             # Camada aditiva (qualifica por classe de risco)
+│       ├── risk-governance.md          # FAST / CONTROLLED / SOVEREIGN, fail-closed, escalonamento
+│       ├── delivery-window-envelope.md # Delivery Window & Delivery Envelope
+│       ├── continuous-loop.md          # Continuous Engineering Loop & taxonomia de exceções
+│       ├── human-gate-aggregation.md   # Agregação de Human Gates por classe
+│       ├── proportional-validation-audit.md # Validação/auditoria proporcionais
+│       ├── operational-triggers.md     # Gatilhos semânticos + Prompt 0..3 como contratos internos
+│       ├── reporting-and-tracking-compression.md # Micro evidência & compressão de tracking
+│       └── authority-invariants-v2.md  # Invariantes e reconciliações (vetor do auditor, Fast Track)
 ├── skills/
 │   └── operational-kit/
-│       └── SKILL.md                    # Skill Operacional V1: guia procedimental do agente
+│       └── SKILL.md                    # Skill Operacional (V1 + seção V2): guia do agente
 ├── prompts/
-│   └── v1/
+│   └── v1/                             # Contratos internos compatíveis (opcionais como interface)
 │       ├── prompt-0-bootstrap.md       # OP-PROMPT-0: Contrato de Bootstrap / Discovery
 │       ├── prompt-1-delivery.md        # OP-PROMPT-1: Contrato de Delivery / Execução
 │       ├── prompt-2-audit.md           # OP-PROMPT-2: Contrato de Auditoria Independente
 │       └── prompt-3-hardening.md       # OP-PROMPT-3: Contrato de Hardening Cirúrgico
 └── templates/
     ├── deviations.md.template          # Registro formal de exceções auditáveis
+    ├── delivery-envelope.md            # (V2) Autorização delimitada por janela
+    ├── micro-evidence-record.md        # (V2) Evidência de incremento do loop
+    ├── exception-record.md             # (V2) Registro de exceção que interrompe o loop
     ├── prompt-0-bootstrap-report.md    # Estrutura de saída do Bootstrap Report
     ├── prompt-1-delivery-report.md     # Estrutura de saída do Delivery Report
     ├── prompt-2-audit-report.md        # Estrutura de saída do Audit Report

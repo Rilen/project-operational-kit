@@ -1,5 +1,7 @@
 # [OP-PROMPT-3] HARDENING & REMEDIATION PROMPT
 
+> **Compatibilidade Kit V2 (2.0.0):** contrato preservado como **contrato interno de fase** (opcional como interface humana); o gatilho semântico equivalente é `Agente, corrigir`. `HARDENING ≠ CLOSURE`. `PROMPT ≠ AUTHORITY`.
+
 ## CONTRATO OPERACIONAL DE ENTRADA — FASE 3
 
 **Identificador Canônico:** `OP-PROMPT-3`  

@@ -285,6 +285,62 @@ Para preservar a integridade do ecossistema, a Skill **NÃO DEVE**:
 5. Declarar aprovação em auditoria sem verificação adversarial independente;
 6. Inventar dados, suposições ou evidências não verificadas no ambiente;
 7. Manter estado ou depender de memória volátil da sessão para continuidade;
-8. Criar mecanismos de emergência, "Fast Track", atalhos ou "Overrides" no V1;
+8. Criar mecanismos de emergência, "Fast Track", atalhos ou "Overrides" que **removam, simulem ou dispensem** autoridade, evidência, fail-closed ou auditoria. A **proporcionalidade por classe de risco (V2)** não é Fast Track: apenas **agrega** gates e **modula** a densidade probatória dentro de um envelope autorizado (`PROPORTIONAL GOVERNANCE ≠ FAST TRACK`);
 9. Criar novos estados fora dos 12 estados canônicos da máquina de estados;
 10. Incorporar melhorias ou refatorações não autorizadas sob pretexto de oportunidade (*anti-scope creep*).
+
+---
+
+## 9. Governança Proporcional ao Risco — Camada V2 (aditiva)
+
+A partir de **2.0.0**, o Kit incorpora uma camada **aditiva** (`protocol/v2/`) que operacionaliza o Princípio 6. A V2 **não revoga** `protocol/v1/`: o ciclo de quatro fases e dois Human Gates permanece o **baseline `SOVEREIGN`**; a V2 **qualifica por classe de risco**.
+
+```text
+PART I  (protocol/v1) = BASELINE SOVEREIGN (preservado)
+PART II (protocol/v2) QUALIFICA POR CLASSE DE RISCO (aditivo)
+CONFLITO NA MESMA CLASSE → MAIS RESTRITIVO VENCE
+CONFLITO DE INVARIANTES → INVARIANTE VENCE
+```
+
+### 9.1 Classes e classificação fail-closed
+- Classes: `FAST`, `CONTROLLED`, `SOVEREIGN` (`protocol/v2/risk-governance.md`).
+- Fail-closed: `FAST?→CONTROLLED`; `CONTROLLED?→SOVEREIGN`; `UNKNOWN→SOVEREIGN`; `UNCERTAINTY→MORE GOVERNANCE`.
+- **Auto-escalonamento somente para cima**; rebaixamento autônomo é proibido.
+
+### 9.2 Delivery Window & Delivery Envelope
+- Toda execução material ocorre **dentro de um envelope humano** (`protocol/v2/delivery-window-envelope.md`).
+- `NO ENVELOPE → NO DELIVERY` · `INSIDE AUTHORIZED ENVELOPE → OPERATIONAL AUTONOMY` · `OUTSIDE → STOP/ESCALATE`.
+- Window Classifications **não** são estados canônicos.
+
+### 9.3 Continuous Engineering Loop & exceções
+- Loop contínuo dentro do envelope; **atenção humana por exceção**, não por fase (`protocol/v2/continuous-loop.md`).
+- `HUMAN ATTENTION ∝ EXCEPTION SEVERITY` · `NOTIFICATION ≠ APPROVAL`.
+- Taxonomia de exceções: `EX_AUTHORITY`, `EX_SCOPE`, `EX_RISK`, `EX_REVERSIBILITY`, `EX_NORMATIVE`, `EX_PUBLICATION`, `EX_CLOSURE`, `EX_SECURITY`, `EX_AMBIGUITY`, `EX_ENVIRONMENT`.
+- `EXCEPTION DETECTION ≠ EXCEPTION RESOLUTION`: o agente detecta e escala; o humano resolve.
+
+### 9.4 Agregação de gates e auditoria proporcional
+- `FAST`: sem gate por microincremento dentro do envelope; `CONTROLLED`: 1 autorização + 1 closeout; `SOVEREIGN`: HG1 + HG2 (`protocol/v2/human-gate-aggregation.md`).
+- Densidade de auditoria proporcional (`protocol/v2/proportional-validation-audit.md`).
+- `AGGREGATED GATES ≠ REMOVED AUTHORITY`.
+
+### 9.5 Gatilhos semânticos e contratos internos
+- Gatilhos: `iniciar sessão`, `continuar`, `tratar issue #N`, `auditar`, `corrigir`, `publicar`, `status`, `finalizar sessão` (`protocol/v2/operational-triggers.md`).
+- `OP-PROMPT-0..3` permanecem como **contratos internos compatíveis**; a interface humana deixa de **precisar** invocá-los nominalmente.
+- `TRIGGER ≠ AUTHORIZATION`.
+
+### 9.6 Reconciliação do auditor e do Fast Track
+- `AUDITOR TECHNICAL VETO` vincula **apenas a transição técnica** (`FINDING → HARDENING_REQUIRED`); `AUDITOR ≠ VETO SOBERANO` e **não** se sobrepõe aos Níveis 1/2 (`protocol/v2/authority-invariants-v2.md`).
+- `PROPORTIONAL GOVERNANCE ≠ FAST TRACK` · `AGGREGATED GATES ≠ REMOVED AUTHORITY` · `CONTINUOUS LOOP ≠ CONTINUOUS AUTHORITY`.
+
+### 9.7 Invariantes V2 (não revogáveis)
+```text
+HUMAN AUTHORITY IS FINAL (ENVELOPE · EXCEPTION · PUBLICATION · CLOSURE)
+AGENT ≠ AUTHORITY
+NO WRITE WITHOUT MANDATE/ENVELOPE
+NO SELF-APPROVAL
+SILENCE/TIMEOUT ≠ APPROVAL
+AUDIT_PASSED ≠ HOMOLOGATED
+LOOP_CLOSED ≠ CLOSED
+```
+
+`[REQUIREMENT]` Os seis princípios canônicos permanecem inalterados; nenhum projeto consumidor é atualizado automaticamente (`KIT UPDATE ≠ PROJECT UPDATE`).

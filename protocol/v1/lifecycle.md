@@ -6,6 +6,10 @@
 
 ---
 
+> **Nota de precedência (Kit V2, a partir de 2.0.0):** este ciclo de quatro fases e dois Human Gates é o **baseline `SOVEREIGN`**. A camada aditiva `protocol/v2/` **qualifica** este ciclo por classe de risco (`FAST`/`CONTROLLED`/`SOVEREIGN`) **sem revogá-lo** e sem remover a autoridade humana final. Ver `protocol/v2/human-gate-aggregation.md`.
+
+---
+
 ## 1. Visão Geral
 
 O ciclo de vida do `project-operational-kit` organiza qualquer intervenção técnica em um fluxo determinístico, estruturado em quatro etapas operacionais canônicas e dois Human Gates obrigatórios.

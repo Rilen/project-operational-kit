@@ -12,6 +12,8 @@ Este documento formaliza os estados operacionais, eventos disparadores e invaria
 
 Esta especificação é puramente normativa e documental, estabelecendo as condições lógicas que determinam se uma transição de estado é lícita ou se configura violação de processo.
 
+> **Nota de precedência (Kit V2, a partir de 2.0.0):** as **Window Classifications** (`protocol/v2/delivery-window-envelope.md`) e as **Loop Classifications** (`protocol/v2/continuous-loop.md`) **não** são estados desta máquina e não pertencem à matriz de transições. Os 12 estados canônicos permanecem **fechados e inalterados**; a V2 é aditiva e não cria estados.
+
 ---
 
 ## 2. Inventário Canônico dos Estados
